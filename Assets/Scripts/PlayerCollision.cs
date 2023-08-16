@@ -35,11 +35,10 @@ public class PlayerCollision : MonoBehaviour
 		myRB.position += velocity * Time.fixedDeltaTime;
 	}
 
-	// can be attached to trigger OR active collider
-	void OnTriggerEnter2D(Collider2D trigger)
+	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (trigger.tag == "stone-wall")
-        {
+		if (other.CompareTag("Player"))
+		{
 			velocity = Vector2.zero;
 		}
 	}
