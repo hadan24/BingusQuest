@@ -11,7 +11,7 @@ using UnityEngine.Rendering;
 
 public class Mob : MonoBehaviour
 {
-	public float speed = 2f;
+	public float speed = 2.5f;
 
 	private readonly Transform[] points = PathPoints.points;
 	private Vector3 currentDestination;

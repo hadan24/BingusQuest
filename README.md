@@ -15,3 +15,7 @@ Dan:
 Thomas: I definitely ran into some issues when working on the prototype. I haven't developed in Unity at all previous to working on this project (that's where the challenge for this comes from), and it was a lot to learn pretty quickly. As such, I worked on the first part of the prototype, the "town" section, as it was simpler than the tower defense portion of the game. I learned about player movement, scenes, assets, scripting, and interactions and collisions.
 
 Dan:
+
+Tower defense scene code was heavily based on these tutorials:
+* https://youtu.be/Eq6rCCO2EU0
+* https://youtube.com/playlist?list=PLPV2KyIb3jR4u5jX8za5iU1cqnQPmbzG0

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8827146550569947475}
   - component: {fileID: 8827146550569947436}
-  - component: {fileID: 2459204310372438861}
+  - component: {fileID: 9154336273641872706}
   m_Layer: 0
   m_Name: floppa-grunt
   m_TagString: Untagged
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1381931411
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 28acc0bafb784c14b9617c19794510e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2459204310372438861
+--- !u!114 &9154336273641872706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,5 +97,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cbe46229044d3b41b597e2db99cad3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathPts: []
-  spd: 2
+  speed: 2.5

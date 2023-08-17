@@ -381,6 +381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 622159328}
+  - component: {fileID: 622159329}
   m_Layer: 0
   m_Name: Path
   m_TagString: Untagged
@@ -419,6 +420,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &622159329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622159327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495e6ff8c8c0cc845a2dc57a29c6cafd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &623179295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,7 +1346,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61e04203c516f954fb542d4d4c5ca771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mobPF: {fileID: 5558719050821373291, guid: c5ca7c11297c62b4f9a0ce08ffe564df, type: 3}
+  enemyPF: {fileID: 8827146550569947437, guid: 6c418cfb53ac7e542b71486d103bd843, type: 3}
+  waveDelay: 5
+  enemyDelay: 0.5
+  numberOfWaves: 10
 --- !u!1001 &1765311150
 PrefabInstance:
   m_ObjectHideFlags: 0

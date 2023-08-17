@@ -3,11 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-/*
-	This way of making the path accessible was from this tutorial:
-		- https://youtu.be/aFxucZQ_5E4
-*/
-
 public class PathPoints : MonoBehaviour
 {
 	public static Transform[] points;
