@@ -14,21 +14,15 @@ public class MerchantDialogue : MonoBehaviour
 
     public float word_speed;
     public bool player_is_close;
+    private bool active_dialogue = false;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && player_is_close)
+        if(Input.GetKeyDown(KeyCode.E) && player_is_close && !active_dialogue)
         {
-            if(dialogue_panel.activeInHierarchy)
-            {
-                zeroText();
-            }
-            else
-            {
-                dialogue_panel.SetActive(true);
-                StartCoroutine(Typing());
-            }
+            dialogue_panel.SetActive(true);
+            StartCoroutine(Typing());
         }
     }
     
@@ -37,15 +31,24 @@ public class MerchantDialogue : MonoBehaviour
         dialogue_text.text = "";
         index = 0;
         dialogue_panel.SetActive(false);
+        active_dialogue = false;
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2);
     }
 
     IEnumerator Typing()
     {
-        foreach(char letter in dialogue[index].ToCharArray())
+        active_dialogue = true;
+        foreach (char letter in dialogue[index].ToCharArray())
         {
             dialogue_text.text += letter;
             yield return new WaitForSeconds(word_speed);
         }
+        yield return new WaitForSeconds(1);
+        zeroText();
     }
 
     public void NextLine()
@@ -75,7 +78,6 @@ public class MerchantDialogue : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             player_is_close = false;
-            zeroText();
         }
     }
 }

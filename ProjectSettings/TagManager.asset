@@ -45,6 +45,9 @@ TagManager:
   - name: Path
     uniqueID: 597813575
     locked: 0
-  - name: Characters
+  - name: Merchants
+    uniqueID: 3855277073
+    locked: 0
+  - name: Main Character
     uniqueID: 2913035885
     locked: 0
