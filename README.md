@@ -12,7 +12,7 @@ do more design and make a fully fleshed out game. The ideas and design that we d
 Dan:
 
 ## The Prototype
-Thomas: I definitely ran into some issues when working on the prototype. I haven't developed in Unity at all previous to working on this project (that's where the challenge for this comes from), and it was a lot to learn pretty quickly. As such, I worked on the first part of the prototype, the "town" section, as it was simpler than the tower defense portion of the game. I learned about player movement, scenes, assets, scripting, and interactions and collisions.
+Thomas: I definitely ran into some issues when working on the prototype. I haven't developed in Unity at all previous to working on this project (that's where the challenge for this comes from), and it was a lot to learn pretty quickly. As such, I worked on the first part of the prototype, the "town" section, as it was simpler than the tower defense portion of the game. I learned about player movement, scenes, assets, scripting, and interactions and collisions. YouTube tutorials were a great resource, and I went from knowing close to nothing about Unity to understanding some basic mechanics. It gave me a good foundational basis for development in Unity.
 
 Dan:
 
