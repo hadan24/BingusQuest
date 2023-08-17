@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // EP 10, https://www.youtube.com/playlist?list=PLFt_AvWsXl0fnA91TcmkRyhhixX9CO3Lw
 
@@ -35,12 +36,12 @@ public class PlayerCollision : MonoBehaviour
 		myRB.position += velocity * Time.fixedDeltaTime;
 	}
 
-	// can be attached to trigger OR active collider
-	void OnTriggerEnter2D(Collider2D trigger)
+	//upon colliding with the wall, scene will advance to tower defence portion
+	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (trigger.tag == "stone-wall")
-        {
-			velocity = Vector2.zero;
+		if (other.CompareTag("stone-wall"))
+		{
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 		}
 	}
 }
