@@ -8,6 +8,7 @@ public class Fireball : MonoBehaviour
 	private Rigidbody2D myRB;
 
 	public float speed = 50f;
+	public int damage = 5;
 
 	public void targetLock(Transform _target)
 	{
@@ -39,8 +40,12 @@ public class Fireball : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D triggered) {
 		if (triggered.tag != "Enemy")
 			return;
-
-		Destroy(triggered.gameObject);
+		
+		Enemy enemyScript = triggered.transform.GetComponent<Enemy>();
+		if (enemyScript != null)
+			enemyScript.TakeDamage(damage);
+		else Destroy(triggered.gameObject);
+		
 		Destroy(gameObject);
 	}
 }

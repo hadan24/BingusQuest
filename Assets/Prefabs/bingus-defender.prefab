@@ -130,6 +130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 4
-  cooldown: 1
+  cooldown: 0.5
   projectilePF: {fileID: 360107757480478944, guid: dcb40e7084a453943b0de6f27f77afde, type: 3}
   cast_hand: {fileID: 8939117362900324118}

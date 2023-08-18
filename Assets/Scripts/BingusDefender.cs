@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class AttackEnemies : MonoBehaviour
+public class BingusDefender : MonoBehaviour
 {
 	public float range = 4f;
-	public float cooldown = 1f;
+	public float cooldown = .5f;
 	private float cooldownCountdown = 0f;
 
 	public GameObject projectilePF;

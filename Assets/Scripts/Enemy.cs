@@ -6,9 +6,10 @@ using UnityEngine;
 		- https://youtu.be/aFxucZQ_5E4
 */
 
-public class Mob : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
 	public float speed = 2.5f;
+	public int HP = 50;
 
 	private readonly Transform[] points = PathPoints.points;
 	private Vector3 currentDestination;
@@ -19,6 +20,13 @@ public class Mob : MonoBehaviour
     {
 		currentDestination = points[0].position;
     }
+
+	public void TakeDamage(int taken)
+	{
+		HP -= taken;
+		if (HP <= 0)
+			Destroy(gameObject);
+	}
 
     // Update is called once per frame
     void Update()
