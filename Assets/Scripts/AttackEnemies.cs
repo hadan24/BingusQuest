@@ -60,7 +60,11 @@ public class AttackEnemies : MonoBehaviour
 		// https://gamedev.stackexchange.com/questions/186283/rotating-towards-a-target-in-top-down-2d-game
 		Vector3 enemyDirection = currentTarget.position - transform.position;
 		float angleToEnemy = Vector3.SignedAngle(transform.up, enemyDirection, transform.forward);
-		Instantiate(projectilePF, cast_hand.position, Quaternion.Euler(0f, 0f, angleToEnemy));
+
+		GameObject projectile = Instantiate(projectilePF, cast_hand.position, Quaternion.Euler(0f, 0f, angleToEnemy));
+		Fireball fb = projectile.GetComponent<Fireball>();
+		if (fb != null)
+			fb.targetLock(currentTarget);
 	}
 
 	private void OnDrawGizmosSelected() {
