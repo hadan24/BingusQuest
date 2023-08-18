@@ -6,7 +6,7 @@ public class WaveSpawner : MonoBehaviour
 {
 	public GameObject enemyPF;
 	public float waveDelay = 5f;
-	public float enemyDelay = .5f;
+	public float enemyDelay = .4f;
 	public int numberOfWaves = 10;
 
 	private int currentWave = 0;
@@ -24,10 +24,11 @@ public class WaveSpawner : MonoBehaviour
 		if (currentWave <= numberOfWaves && waveCountdown <= 0f)
 		{
 			waveCountdown = waveDelay;
+			if (waveCountdown < enemyDelay*numberOfWaves)
+				waveCountdown += enemyDelay * (numberOfWaves + 1);
 			StartCoroutine(SpawnWave());
 		}
-		else
-			waveCountdown -= Time.deltaTime;
+		waveCountdown -= Time.deltaTime;
 	}
 
 	IEnumerator SpawnWave()
