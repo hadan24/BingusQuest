@@ -35,6 +35,9 @@ public class BingusDefender : MonoBehaviour
 
 	void UpdateTarget()
 	{
+		if (currentTarget != null)
+			return;
+			
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 		GameObject nearestEnemy = null;
 		float shortestDistance = float.PositiveInfinity;

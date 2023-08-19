@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Fireball : MonoBehaviour
@@ -7,8 +5,8 @@ public class Fireball : MonoBehaviour
 	private Transform target = null;
 	private Rigidbody2D myRB;
 
-	public float speed = 50f;
-	public int damage = 5;
+	public float speed = 10f;
+	public int power = 5;
 
 	public void targetLock(Transform _target)
 	{
@@ -29,23 +27,20 @@ public class Fireball : MonoBehaviour
 			Destroy(gameObject);
 			return;
 		}
-    }
-
-	private void FixedUpdate() {
 		Vector3 enemyDirection = (target.position - transform.position).normalized;
 		Vector2 velocity = enemyDirection * speed;
 		myRB.position += velocity * Time.deltaTime;
-	}
+    }
 
 	private void OnTriggerEnter2D(Collider2D triggered) {
 		if (triggered.tag != "Enemy")
 			return;
 		
+		Destroy(gameObject);
+
 		Enemy enemyScript = triggered.transform.GetComponent<Enemy>();
 		if (enemyScript != null)
-			enemyScript.TakeDamage(damage);
+			enemyScript.TakeDamage(power);
 		else Destroy(triggered.gameObject);
-		
-		Destroy(gameObject);
 	}
 }
