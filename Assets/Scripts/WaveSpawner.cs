@@ -11,12 +11,6 @@ public class WaveSpawner : MonoBehaviour
 	private int currentWave = 0;
 	private float waveCountdown = 1f;
 
-	// Start is called before the first frame update
-	void Start()
-	{
-		
-	}
-
 	// Update is called once per frame
 	void Update()
 	{
