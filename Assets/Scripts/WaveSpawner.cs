@@ -22,6 +22,11 @@ public class WaveSpawner : MonoBehaviour
 			StartCoroutine(SpawnWave());
 		}
 		waveCountdown -= Time.deltaTime;
+
+		if (Input.GetKeyDown(KeyCode.Q))
+		{
+			Application.Quit();
+		}
 	}
 
 	IEnumerator SpawnWave()

@@ -23,3 +23,12 @@ __Dan:__ I had experience with Unity from previous classes and personal projects
 
 Tower defense scene code was heavily based on these tutorials:
 * https://youtube.com/playlist?list=PLPV2KyIb3jR4u5jX8za5iU1cqnQPmbzG0
+
+## Playtesting Report
+__Dan:__ I was in charge of exporting and playtesting as we were working past the deadline and I had more Unity experience.
+
+The playtester immediately loved the visual style of the game as it was. In the town scene, moving with the arrow keys or WASD was self-explanatory, though they likely have that instinct from having played other games before. Starting the player on the far left of the screen in addition to the on-screen message to move right also help make it clear what the intended actions were for this demo.
+
+Once the tower defense portion began, they panicked as the first wave appeared almost immediately (an accidental holdover from development and testing). Having the squares where new Bingus defenders could be placed light up when the mouse rolled over them was not enough of an indicator for what to do under the sudden stress. However, once they placed the first Bingus on accident, it was clear what the goal was. They enjoyed being able to place as many as they wished and watch them all mow down the waves of enemies.
+
+Besides the clarity issues, their main want for the game was to have a big high-HP boss at the end to finish off the level. Overall, playtesting went well! Both the playtester and I could see that a full, completed version of this could be quite enjoyable.
